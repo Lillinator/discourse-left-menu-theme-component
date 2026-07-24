@@ -63,6 +63,12 @@
     .custom-header-icon-link:nth-child(5) {
       grid-area: custom-header-icon-link-5;
     }
+    // ** Fix for folding phones viewport sizes using Horizon theme ** //
+    @media (min-width: 640px) and (max-width: 767.98px) {
+      .d-header>.wrap .contents {
+        display: contents!important;
+      }
+    }
 
     // ** Some protection for text-only site titles ** //
     .title {
