@@ -63,12 +63,6 @@
     .custom-header-icon-link:nth-child(5) {
       grid-area: custom-header-icon-link-5;
     }
-    // ** Fix for folding phones viewport sizes using Horizon theme ** //
-    @media (min-width: 640px) and (max-width: 767.98px) {
-      .d-header>.wrap .contents {
-        display: contents!important;
-      }
-    }
 
     // ** Some protection for text-only site titles ** //
     .title {
@@ -81,7 +75,6 @@
   }
 
   // ** Centre site logo if `center_logo` setting is enabled ** /
-
   @if ($center_logo == 'true') {
     .d-header:not(:has(.extra-info-wrapper.topic-info-visible)):not(:has(.extra-info-wrapper .topic-link)):not(.header-topic-info-visible) .title {
       position: absolute;
@@ -90,5 +83,12 @@
       transform: translate(-50%, -50%);
       margin: 0;
     }
+  }
+}
+
+// ** Fix for folding phones viewport sizes using Horizon theme ** //
+@media (min-width: 640px) and (max-width: 767.98px) {
+  .d-header>.wrap .contents {
+    display: contents!important;
   }
 }
